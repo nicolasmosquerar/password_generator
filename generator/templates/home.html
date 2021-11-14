@@ -1,16 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
+{%extends layout.html%}
+
+{%block content %}
+
 <h1>Welcome to the password generator</h1> </h1>
 
-<form action="password">
+<form action="{% url 'password' %}">
 
 <h1>Password generator :)</h1>
 
@@ -28,8 +22,9 @@
 
     <label for="uppercase">Uppercase</label>
     <input type="checkbox" name="uppercase" id="uppercase">
+    <label for="special">Special characters</label>
+    <input type="checkbox" name="special" id="special">
     <button>Generate password</button>
 </form>
 
-</body>
-</html>
+{%endblock %}
